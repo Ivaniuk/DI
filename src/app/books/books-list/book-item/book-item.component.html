@@ -1,0 +1,28 @@
+<!-- complete this form -->
+<article
+  [class]="{
+    'status-new': book().status === 'NEW',
+    'status-in-progress': book().status === 'IN_PROGRESS',
+    'status-finished': book().status === 'FINISHED'
+  }"
+>
+  <header>
+    <h3>bookTitle</h3>
+    <p>bookStatus</p>
+  </header>
+  <p>author</p>
+  <p>genre</p>
+  <form (ngSubmit)="onChangeBookStatus(bookId, status)">
+    <select #status>
+      <option value="new">New</option>
+      <option value="in-progress">In-Progress</option>
+      <option value="finished">Finished</option>
+    </select>
+    <p>
+      <button>Change Status</button>
+    </p>
+    <p>
+      <button type="button" (click)="onDeleteBook(bookId, title)">Delete book</button>
+    </p>
+  </form>
+</article>

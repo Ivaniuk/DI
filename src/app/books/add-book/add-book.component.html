@@ -1,0 +1,18 @@
+<form (ngSubmit)="onAddBook()" #form>
+  <h1>Personal book tracker</h1>
+  <p>
+    <label for="title">Title</label>
+    <input type="text" id="title" name="title" #title />
+  </p>
+  <p>
+    <label for="author">Author</label>
+    <input id="author" name="author" #author />
+  </p>
+    <p>
+    <label for="genre">Genre</label>
+    <input id="genre" name="genre" #genre />
+  </p>
+  <p id="actions">
+    <button>Add Book</button>
+  </p>
+</form>

@@ -1,0 +1,15 @@
+<header>
+  <h2>Book collection</h2>
+  <p>
+    <select (change)="onChangeBooksFilter(filter)" #filter>
+      <option value="all">All</option>
+      <option value="new">New</option>
+      <option value="in-progress">In-Progress</option>
+      <option value="finished">Finished</option>
+    </select>
+  </p>
+</header>
+
+<ul>
+  <!-- books list -->
+</ul>
