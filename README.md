@@ -6,23 +6,23 @@ Your app should work as shown below:
 
 ## Services
 
-**BooksService**
+**BooksService**<br/>
 • Contains methods for adding a new book, changing the status of an existing book, and deleting a book from the library
 • Uses an in-memory array to store books (in a real app, this would connect to a backend)
 • Uses LoggerService to accompany the actions of adding a new book, changing the status, and deleting a book with corresponding messages to the console indicating the time and description of the action
 
-**LoggerService**
+**LoggerService**<br/>
 • Provides the ability to accompany actions on books in the application with corresponding messages to the console indicating the time of the operation
 • Contains a method that outputs the time and description of the action performed on the book to the console.
 • Injected into the BooksService service
 
-## Dependency Injection
+## Dependency Injection<br/>
 
 • Both services are provided at the root level
 
 ## Main components
 
-**BookItemComponent**
+**BookItemComponent**<br/>
 • The component implements the book entity in the project, contains the logic and user interface for changing the status and deleting the book
 • The component accepts an entity of type Book as input
 • Displays a description of its status in the component template next to the book name. For the 'NEW' status, the description 'New' is displayed, for the 'IN_PROGRESS' status, the description 'Currently reading' is displayed, for the 'FINISHED' status, the description 'Finished' is displayed
@@ -31,14 +31,14 @@ Your app should work as shown below:
 • Contains a method for deleting the current book from the library
 • Uses a service to change the status and delete the book
 
-**BooksListComponent**
+**BooksListComponent**<br/>
 • The component displays a collection of books available in the personal library
 • Contains the logic for generating a list of books based on the current value of the selected filter
 • Uses a service to generate a list of books
 • Allows you to filter books by the following statuses: "All", "New", "In-progress", "Finished"
 • All books are displayed by default
 
-**AddBookComponent**
+**AddBookComponent**<br/>
 • The component contains the functionality of adding a new book to the library
 • Contains a method for adding a new book to the collection
 • Uses a service to add a new book to the collection
